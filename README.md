@@ -12,8 +12,3 @@ The passwords used in our analysis are from 000webhost leak that is available on
 ## Installation
 
 To run this password strength checker on your local machine, follow these steps:
-
-1. Clone the project from the GitHub repository using the following command:
-
-   ```bash
-   git clone https://github.com/your-username/password-strength-checker.git
