@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Strength Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <section class="password-section">
+      <!-- Navigation bar with hover effect -->
+      <nav class="navbar">
+        <a class="nav-link" href="#password-section">Password Checker</a>
+        <a class="nav-link" href="#about-section">About Us</a>
+      </nav>
+
+      <h1>Password Strength Checker</h1>
+      <form method="post">
+        <label for="name">Enter Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="user_input">Enter a password:</label>
+        <input type="text" id="user_input" name="user_input" required />
+        <button type="submit">Check</button>
+      </form>
+      <p style="color: {{ color }}">Password Strength: {{ result }}</p>
+      <!-- Display the suggested stronger passwords -->
+      <ul>
+        {% for suggestion in suggestions %}
+        <li>{{ suggestion }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="about-section" id="about-section">
+      <h2>"About Us"</h2>
+      <p>
+        In our Information Security (IS) project, we have developed a robust and
+        user-friendly Password Strength Checker application. Password security
+        is a fundamental aspect of digital security, and our project aims to
+        provide a practical solution to help users create stronger and more
+        secure passwords. Our application utilizes Machine Learning (ML) models
+        and the Flask framework to achieve this. We have trained our ML model to
+        evaluate the strength of passwords based on various factors, including
+        character complexity and length. <br />
+        Using techniques like Pickle and Dill, we have successfully incorporated
+        the trained model into our web application, enabling users to input
+        their passwords and receive instant feedback on the strength of their
+        passwords. Our web-based Password Strength Checker not only evaluates
+        the strength of passwords but also provides valuable suggestions for
+        improving password security. It offers a seamless user experience with a
+        user-friendly interface and a sleek navigation bar.<br />
+        Additionally, our project incorporates an "About Us" section,
+        demonstrating our commitment to providing users with essential
+        information about our development team and the motivation behind this
+        crucial tool. Our project's educational value lies in teaching users
+        about the importance of strong passwords and best practices for
+        enhancing digital security. It is a practical and insightful tool for
+        both beginners and experienced users looking to secure their online
+        accounts effectively.
+      </p>
+    </section>
+    <footer>
+      <p>
+        Made with <span class="heart">❤</span> by Dhvani, Dwija, Manan, Purva
+      </p>
+      <a href="https://github.com/manan152003/info-sec_model" target="_blank"
+        >GitHub-Project</a
+      >
+    </footer>
+  </body>
+</html>

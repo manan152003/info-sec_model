@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+      <a href="{{ url_for('index') }}">Tools</a>
+      <a href="{{ url_for('about') }}">About Us</a>
+    </div>
+
+    <div class="about-section">
+      <h2>About Us</h2>
+      <p>
+        We are a team of developers dedicated to providing useful tools and
+        information to our users. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Nullam auctor, libero nec dictum maximus, lectus tellus
+        facilisis ex, ut congue metus odio at dui.
+      </p>
+    </div>
+  </body>
+</html>
